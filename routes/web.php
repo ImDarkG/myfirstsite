@@ -51,6 +51,23 @@ Route::get( '/felhasznaloiadat', function(){
 });
 
 
+Route::get('posts/{post}', function ($post) {
+
+    $posts = [
+        "first" => 'Első blog',
+        "second" => 'Második blog'
+
+    ];
+
+    return view('postnezet', [
+        'post' => $posts[$post] ?? 'Nincs ilyen blog!'
+    ]);
+});
+
+
+Route::get("vezerlo/{bejegyzes}", [
+    'App\Http\Controllers\PostController',
+    'show'
+]);
 
 Route::view(uri: '/contact', view: 'contact');
-
