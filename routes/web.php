@@ -70,4 +70,12 @@ Route::get("vezerlo/{bejegyzes}", [
     'show'
 ]);
 
+
+Route::get("/csoport", [
+    'App\Http\Controllers\GroupController',
+    'list'
+]);
+
+
+
 Route::view(uri: '/contact', view: 'contact');
