@@ -17,5 +17,13 @@ class GroupController extends Controller
         ]);
     }
 
+    function show($id){
+
+        return view('nezet', [
+            'csoporttag' => Group::csoportLista()[$id],
+
+        ]);
+    }
+
 
 }

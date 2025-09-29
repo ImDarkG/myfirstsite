@@ -76,6 +76,11 @@ Route::get("/csoport", [
     'list'
 ]);
 
+Route::get("/csoport-tag/{id}", [
+    'App\Http\Controllers\GroupController',
+    'show'
+]);
+
 
 
 Route::view(uri: '/contact', view: 'contact');
